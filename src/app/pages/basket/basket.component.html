@@ -1,0 +1,268 @@
+<div class="path">
+    <a class="path__name" routerLink="/">Homepage</a>
+    <span class="path__name path__name_sign">/</span>
+    <a class="path__name path__name_last">Checkout page</a>
+</div>
+<div class="basket container">
+    
+    <div>
+        <form>
+            <div class="billing__left-side">
+                <div class="billing__element info">
+                    <h3 class="billing__title">Billing info</h3>
+                    <div class="billing__subtitle-box">
+                        <span class="billing__subtitle">Please enter your billing info</span>
+                        <span class="billing__subtitle">Step 1 of 5</span>
+                    </div>
+                    <div class="info__row">
+                        <div class="info__lable-input-box">
+                            <label for="" class="billing__lable">First name</label>
+                            <input type="text" class="info__input input" placeholder="First name">
+                        </div>
+                        <div class="info__lable-input-box">
+                            <label class="billing__lable">Last name</label>
+                            <input type="text" class="info__input input" placeholder="Last name">
+                        </div>
+                    </div>
+                    <div class="info__row">
+                        <div class="info__lable-input-box">
+                            <label class="billing__lable">Email address</label>
+                            <input type="text" class="info__input input" placeholder="Email address">
+                        </div>
+                        <div class="info__lable-input-box">
+                            <label class="billing__lable">Phone number</label>
+                            <input type="text" class="info__input input" placeholder="Phone number">
+                        </div>
+                    </div>
+                    <div class="info__row">
+                        <div class="info__lable-input-box">
+                            <label class="billing__lable">Address</label>
+                            <input type="text" class="info__input input" placeholder="Address">
+                        </div>
+                        <div class="info__lable-input-box">
+                            <label class="billing__lable">Town / City</label>
+                            <input type="text" class="info__input input" placeholder="Town or city">
+                        </div>
+                    </div>
+                    <div class="info__row">
+                        <div class="info__lable-input-box">
+                            <label for="" class="billing__lable">State / Country</label>
+                            <input type="text" class="info__input input" placeholder="Choose a state or Country">
+                        </div>
+                        <div class="info__lable-input-box">
+                            <label class="billing__lable">ZIP/Postal code</label>
+                            <input type="text" class="info__input input" placeholder="Postal code or ZIP">
+                        </div>
+                    </div>
+                    <div class="info__row">
+                        <div class="billing__input-check-box">
+                            <input type="checkbox" class="billing__input-check">
+                            <label class="billing__lable-check">Ship to a different address?</label>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="billing__element method">
+                    <h3 class="billing__title">Billing method</h3>
+                    <div class="billing__subtitle-box">
+                        <span class="billing__subtitle">Please enter your payment method</span>
+                        <span class="billing__subtitle">Step 2 of 5</span>
+                    </div>
+                    <div class="method__row">
+                        <div class="method__row-box">
+                            <input class="method__input" type="checkbox">
+                            <span class="method__text">FedEx</span>
+                        </div>
+                        <div class="method__row-box">
+                            <span class="method__money">+32USD</span>
+                            <span class="method__text">Additional price</span>
+                        </div>
+                        <img class="method__img" src="assets/basket/FedEx.png">
+                    </div>
+                    <div class="method__row">
+                        <div class="method__row-box">
+                            <input class="method__input" type="checkbox">
+                            <span class="method__text">DHL</span>
+                        </div>
+                        <div class="method__row-box">
+                            <span class="method__money">+15USD</span>
+                            <span class="method__text">Additional price</span>
+                        </div>
+                        <img class="method__img" src="assets/basket/dhl.png">
+                    </div>
+                </div>
+    
+                <div class="billing__element payment">
+                    <h3 class="billing__title">Payment method</h3>
+                    <div class="billing__subtitle-box">
+                        <span class="billing__subtitle">Please enter your payment method</span>
+                        <span class="billing__subtitle">Step 3 of 5</span>
+                    </div>
+                    <div class="payment__credit-card credit-card">
+                        <picture class="credit-card__picture">
+                            <img class="credit-card__image" src="assets/basket/credit-card.svg">
+                        </picture>
+                        <div class="credit-card__lable-input-box">
+                            <label class="billing__lable">Card number</label>
+                            <input type="text" class="credit-card__input input" placeholder="Card number">
+                        </div>
+                        <div class="credit-card__last-row">
+                            <div class="credit-card__holder">
+                                <label class="billing__lable">Card holder</label>
+                                <input type="text" class="credit-card__input input" placeholder="Card holder">
+                            </div>
+                            <div class="credit-card__date-cvc">
+                                <label class="billing__lable">Expiration date</label>
+                                <input type="text" class="credit-card__input input" placeholder="DD/MM/YY">
+                            </div>
+                            <div class="credit-card__date-cvc credit-card__date-cvc_cvc">
+                                <label class="billing__lable">cvc</label>
+                                <input type="text" class="credit-card__input input" placeholder="CVC">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="method__row method__row_paypal">
+                        <div class="method__row-box">
+                            <input type="checkbox" class="method__input">
+                            <span class="method__text">PayPal</span>
+                        </div>
+                        <img class="method__img" src="assets/basket/PayPal.png">
+                    </div>
+                    <div class="method__row">
+                        <div class="method__row-box">
+                            <input type="checkbox" class="method__input">
+                            <span class="method__text">Bitcoin</span>
+                        </div>
+                        <img class="method__img" src="assets/basket/bitcoin.png">
+                    </div>
+                </div>
+    
+                <div class="billing__element additional">
+                    <h3 class="billing__title">Additional informations</h3>
+                    <div class="billing__subtitle-box">
+                        <span class="billing__subtitle">Need something else? We will make it for you!</span>
+                        <span class="billing__subtitle">Step 4 of 5</span>
+                    </div>
+                    <div class="additional__field">
+                        <label class="billing__lable">Order notes</label>
+                        <textarea class="additional__textarea input" cols="30" rows="4" placeholder="Need a specific delivery day? Sending a gitf? Let`s say ..."></textarea>
+                    </div>
+                </div>
+    
+                <div class="billing__element confirmation">
+                    <h3 class="billing__title">Confirmation</h3>
+                    <div class="billing__subtitle-box">
+                        <span class="billing__subtitle">We are getting to the end. Just few clicks and your order si ready!</span>
+                        <span class="billing__subtitle">Step 5 of 5</span>
+                    </div>
+                    <div class="confirmation__field confirmation__field_first">
+                        <div class="billing__input-check-box">
+                            <input type="checkbox" class="billing__input-check">
+                            <label class="billing__lable-check">I agree with sending an Marketing and newsletter emails. No spam, promissed!</label>
+                        </div>
+                    </div>
+                    <div class="confirmation__field">
+                        <div class="billing__input-check-box">
+                            <input type="checkbox" class="billing__input-check">
+                            <label class="billing__lable-check">I agree with our terms and conditions and privacy policy.</label>
+                        </div>
+                    </div>
+                </div>
+    
+                <button type="submit" class="billing__btn button">Complete order</button>
+    
+                <div class="billing__safe-sign-box safe-sign-box">
+                    <picture>
+                        <img class="safe-sign-box__image" src="assets/basket/safe-data.png">
+                    </picture>
+                    <p class="safe-sign-box__subtitle">All your data are safe</p>
+                    <p class="safe-sign-box__text">We are using the most advanced security to provide you the best experience ever.</p>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div class="basket-list">
+        <h1 class="basket-list__header">Shopping cart</h1>
+        <div class="basket-list__content"  *ngFor="let painting of paintings$ | async">
+            <div class="basket-list__left-menu">
+                <img class="basket-list__img" [src]="painting.src"/>
+                <div class="basket-list__list">
+                    <p class="basket-list__item"><img class="basket-list__svg" src="assets/basket/Wishlist.svg">Wishlist</p>
+                    <p class="basket-list__item"><img class="basket-list__svg" src="assets/basket/Compare.svg">Compare</p>
+                    <button class="basket-list__item-btn" (click)="delete(painting.id)"><img class="basket-list__svg" src="assets/basket/Remove.svg">Remove</button>
+                </div>
+            </div>
+            <div class="basket-list__right-menu painting">
+                <h2 class="painting__name" [routerLink]="['/paintings', painting.id]">{{painting.name}}</h2>
+                <div *ngIf="getRating(painting.id) | async as rating">
+                    <span class="star" *ngFor="let star of stars" [class.activeStar]="star <= rating">&#9733;</span>
+                    <span class="star" *ngFor="let star of stars" [class.activeStar]="star > rating">&#9734;</span>
+                </div>
+                <div class="painting__bottom">
+                    <p class="painting__price">{{painting.price}} USD</p>
+                    <div class="painting__count count">
+                        <input class="count__input" type="text" placeholder="1" #numberPcs>
+                        <select class="count__select" id="numberPcs">
+                            <option class="count__option" value="1">Pcs</option>
+                            <option class="count__option" value="2">2 Pcs</option>
+                            <option class="count__option" value="3">3 Pcs</option>
+                            <option class="count__option" value="4">4 Pcs</option>
+                            <option class="count__option" value="5">5 Pcs</option>
+                        </select>
+                    </div>
+                </div>
+                
+            </div>
+            
+        </div>
+        <div class="basket-list__subtotal">
+            <div class="basket-list__row">
+                <p class="basket-list__text">Subtotal</p>
+                <p class="basket-list__text">Tax</p>
+                <p class="basket-list__text">Shipping</p>
+            </div>
+            <div class="basket-list__row">
+                <p class="basket-list__text">{{allSum$ | async}} USD</p>
+                <p class="basket-list__text">17% 16.53 USD</p>
+                <p class="basket-list__text">0 USD</p>
+            </div>
+        </div>
+        <div class="basket-list__promocode-box">
+            <input type="text" class="basket-list__promocode-input" placeholder="Apply promo code" #promoCode>
+            <button class="basket-list__promocode-btn">Apply now</button>
+        </div>
+        <div class="basket-list__total-box">
+            <div>
+                <span class="basket-list__text">Total Order</span>
+                <p class="basket-list__total-date">Guaranteed delivery day: June 12, 2020</p>
+            </div>
+            <div>
+                <span class="basket-list__price">{{16.53 + (allSum$ | async)!}} USD</span>
+            </div>
+        </div>
+        <!-- <p class="basket-list__text">Subtotal</p>
+        <h2 class="basket-list__all-sum">{{allSum$ | async}} USD</h2> -->
+
+    </div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- <div class="row" *ngIf="paintings$ | async as painting">
+    <div class="col-xl-2" [@basket] *ngFor="let p of painting">
+        <img class="painting__img" [src]="p.src">
+        <h2 class="painting__name"><a [routerLink]="['/paintings', p.id]">{{p.name}}</a></h2>
+        <p class="painting__artist">{{p.artist}}</p>
+        <p class="painting__year">{{p.year}}</p>
+        <p class="painting__price">${{p.price}}</p>
+    </div>
+</div> -->

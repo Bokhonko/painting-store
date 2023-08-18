@@ -1,0 +1,49 @@
+<div>
+    <form class="form" [formGroup]="form" (ngSubmit)="submit()">
+        <div class="form__control">
+            <label class="form__input-name">Name</label>
+            <input data-cy="form-name" class="form__input" type="text" placeholder="Name" formControlName="name"/>
+            <div 
+            *ngIf="form.controls['name'].invalid && form.controls['name'].touched"
+            class="form__validation">
+                <small *ngIf="form.controls['name'].errors?.['required']">Поле пусте</small>
+                <small *ngIf="form.controls['name'].errors?.['minlength']">Мінімум {{form.controls['name'].errors?.['minlength']['requiredLength']}} букви</small>
+                <small *ngIf="form.controls['name'].errors?.['maxlength']">Максимум {{form.controls['name'].errors?.['maxlength']['requiredLength']}} букв</small>
+            </div>
+        </div>
+
+        <div class="form__control">
+            <label class="form__input-name">Email</label>
+            <input data-cy="form-email" class="form__input" type="text" placeholder="Email" formControlName="email"/>
+            <div 
+            *ngIf="form.controls['email'].invalid && form.controls['email'].touched"
+            class="form__validation">
+                <small *ngIf="form.controls['email'].errors?.['required']">Поле пусте</small>
+                <small *ngIf="form.controls['email'].errors?.['email']">Некоректно введено email</small>
+            </div>
+        </div>
+
+        <div class="form__control">
+            <label class="form__input-name">Rating</label>
+            <select data-cy="form-rating" class="form__select" formControlName="rating">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+        </div>
+
+        <div class="form__control">
+            <label class="form__input-name">Comment</label>
+            <textarea data-cy="form-comment" class="form__textarea" placeholder="Write a comment" formControlName="comment"></textarea>
+            <div 
+            *ngIf="form.controls['comment'].invalid && form.controls['email'].touched"
+            class="form__validation">
+                <small *ngIf="form.controls['comment'].errors?.['maxlength']">Максимум {{form.controls['name'].errors?.['maxlength']['requiredLength']}} букв</small>
+            </div>
+        </div>
+        <div data-cy="form-success" class="form__success-message" *ngIf="successMessage">{{successMessage}}</div>
+        <button data-cy="form-submit" class="form__button" type="submit" [disabled]="form.invalid">Send a comment</button>
+    </form>
+</div>

@@ -1,0 +1,538 @@
+{
+  "paintings": [
+    {
+      "id": 1,
+      "name": "Dream",
+      "src": "assets/bestsellers/dream.jpg",
+      "categoryId": 1,
+      "artist": "Serguei Borodouline",
+      "year": 2022,
+      "price": 780
+    },
+    {
+      "id": 2,
+      "name": "Transition states",
+      "src": "assets/bestsellers/transition-states.jpg",
+      "categoryId": 2,
+      "artist": "Alessandra B-B",
+      "year": 2022,
+      "price": 1140
+    },
+    {
+      "id": 3,
+      "name": "Continuum",
+      "src": "assets/bestsellers/continuum.jpg",
+      "categoryId": 3,
+      "artist": "Eva Ullrich",
+      "year": 2020,
+      "price": 4500
+    },
+    {
+      "id": 4,
+      "name": "Aqua Waters",
+      "src": "assets/bestsellers/aqua-waters.jpg",
+      "categoryId": 4,
+      "artist": "Elizabeth Lennie",
+      "year": 2022,
+      "price": 5850
+    },
+    {
+      "id": 5,
+      "name": "Glow",
+      "src": "assets/bestsellers/glow.jpg",
+      "categoryId": 5,
+      "artist": "Bea Bozon-Esselink",
+      "year": 2017,
+      "price": 940
+    },
+    {
+      "id": 6,
+      "name": "Portrait",
+      "src": "assets/bestsellers/portrait.jpg",
+      "categoryId": 1,
+      "artist": "JeanLuc Feugeas",
+      "year": 2021,
+      "price": 4800
+    },
+    {
+      "id": 7,
+      "name": "Name it",
+      "src": "assets/top-ranking/name-it.jpg",
+      "categoryId": 2,
+      "artist": "Christel Haag",
+      "year": 2020,
+      "price": 810
+    },
+    {
+      "id": 8,
+      "name": "Dog",
+      "src": "assets/top-ranking/dog.jpg",
+      "categoryId": 3,
+      "artist": "JeanLuc Feugeas",
+      "year": 2019,
+      "price": 12000
+    },
+    {
+      "id": 9,
+      "name": "Starry Night",
+      "src": "assets/top-ranking/starry-night.jpg",
+      "categoryId": 4,
+      "artist": "Vincent van Gogh",
+      "year": 1889,
+      "price": 14500
+    },
+    {
+      "id": 10,
+      "name": "The Scream",
+      "src": "assets/top-ranking/the-scream.jpg",
+      "categoryId": 5,
+      "artist": "Edvard Munch",
+      "year": 1893,
+      "price": 12500
+    },
+    {
+      "id": 11,
+      "name": "Guernica",
+      "src": "assets/top-ranking/guernica.jpg",
+      "categoryId": 1,
+      "artist": "Pablo Picasso",
+      "year": 1937,
+      "price": 11000
+    },
+    {
+      "id": 12,
+      "name": "The Persistence of Memory",
+      "src": "assets/top-ranking/the-persistence-of-memory.jpg",
+      "categoryId": 2,
+      "artist": "Salvador Dali",
+      "year": 1931,
+      "price": 10000
+    },
+    {
+      "id": 13,
+      "name": "Three Musicians",
+      "src": "assets/most-popular/three-musicians.jpg",
+      "categoryId": 3,
+      "artist": "Pablo Picasso",
+      "year": 1921,
+      "price": 19500
+    },
+    {
+      "id": 14,
+      "name": "Girl with a Pearl Earring",
+      "src": "assets/most-popular/girl-with-a-pearl-earring.jpg",
+      "categoryId": 4,
+      "artist": "Johannes Vermeer",
+      "year": 1665,
+      "price": 9500
+    },
+    {
+      "id": 15,
+      "name": "The Night Watch",
+      "src": "assets/most-popular/the-night-watch.jpg",
+      "categoryId": 5,
+      "artist": "De Nachtwacht",
+      "year": 1642,
+      "price": 6000
+    },
+    {
+      "id": 16,
+      "name": "The Kiss",
+      "src": "assets/most-popular/the-kiss.jpg",
+      "categoryId": 6,
+      "artist": "Gustav Klimt",
+      "year": 1908,
+      "price": 8000
+    },
+    {
+      "id": 17,
+      "name": "The Flower Carrier",
+      "src": "assets/most-popular/the-flower-carrier.jpg",
+      "categoryId": 6,
+      "artist": "Diego Rivera",
+      "year": 1935,
+      "price": 6700
+    },
+    {
+      "id": 18,
+      "name": "American Gothic",
+      "src": "assets/most-popular/american-gothic.jpg",
+      "categoryId": 6,
+      "artist": "Grant Wood",
+      "year": 1930,
+      "price": 11150
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "Expressionism"
+    },
+    {
+      "id": 2,
+      "name": "Surrealism"
+    },
+    {
+      "id": 3,
+      "name": "Impressionism"
+    },
+    {
+      "id": 4,
+      "name": "Realism"
+    },
+    {
+      "id": 5,
+      "name": "Abstract"
+    },
+    {
+      "id": 6,
+      "name": "Pop Art"
+    }
+  ],
+  "reviews": [
+    {
+      "id": 1,
+      "author": "Oleksandr",
+      "text": "The best store",
+      "src": ""
+    },
+    {
+      "id": 2,
+      "author": "Oleksandr",
+      "text": "The best store",
+      "src": ""
+    },
+    {
+      "id": 3,
+      "author": "Oleksandr",
+      "text": "The best store",
+      "src": ""
+    },
+    {
+      "id": 4,
+      "author": "Oleksandr",
+      "text": "The best store",
+      "src": ""
+    },
+    {
+      "id": 5,
+      "author": "Oleksandr",
+      "text": "The best store",
+      "src": ""
+    },
+    {
+      "id": 6,
+      "author": "Oleksandr",
+      "text": "The best store",
+      "src": ""
+    }
+  ],
+  "reviewsOfPainting": [
+    {
+      "name": "weqe",
+      "paintingOfId": 4,
+      "email": "qwe@jk",
+      "rating": "1",
+      "comment": "",
+      "id": 1
+    },
+    {
+      "name": "gjhg",
+      "paintingOfId": 4,
+      "email": "jyfgvj@f",
+      "rating": "1",
+      "comment": "",
+      "id": 2
+    },
+    {
+      "name": "adlkv",
+      "paintingOfId": 7,
+      "email": "afd@lj",
+      "rating": "1",
+      "comment": "",
+      "id": 3
+    },
+    {
+      "paintingOfId": 11,
+      "name": "lkhte",
+      "email": "ilh@l",
+      "rating": "5",
+      "comment": "",
+      "id": 4
+    },
+    {
+      "paintingOfId": 4,
+      "name": "kh3",
+      "email": "rwg@4r",
+      "rating": "3",
+      "comment": "t3t3",
+      "id": 5
+    },
+    {
+      "paintingOfId": 4,
+      "name": "6y56u7",
+      "email": "eyer2@t5",
+      "rating": "5",
+      "comment": null,
+      "id": 6
+    },
+    {
+      "paintingOfId": 5,
+      "name": "ajkfhjka",
+      "email": "hf@kjh",
+      "rating": "1",
+      "comment": "af",
+      "id": 7
+    },
+    {
+      "paintingOfId": 7,
+      "name": "sdkjh",
+      "email": "fda@dgs",
+      "rating": "4",
+      "comment": "dfwe",
+      "id": 9
+    },
+    {
+      "paintingOfId": 7,
+      "name": "Mykola",
+      "email": "mykola@gmail.com",
+      "rating": "3",
+      "comment": "",
+      "id": 11
+    },
+    {
+      "paintingOfId": 18,
+      "name": "Mykola",
+      "email": "mykola@gmail.com",
+      "rating": "5",
+      "comment": "",
+      "id": 12
+    },
+    {
+      "paintingOfId": 4,
+      "name": "ksdjgs",
+      "email": "fa@jhg",
+      "rating": "5",
+      "comment": "",
+      "id": 13
+    },
+    {
+      "paintingOfId": 9,
+      "name": "jkgr",
+      "email": "fds@f",
+      "rating": "1",
+      "comment": "",
+      "id": 14
+    },
+    {
+      "paintingOfId": 9,
+      "name": "erfj",
+      "email": "jhbc@kj",
+      "rating": "3",
+      "comment": "",
+      "id": 15
+    },
+    {
+      "paintingOfId": 9,
+      "name": "wfwef",
+      "email": "fwr@f",
+      "rating": "1",
+      "comment": "",
+      "id": 16
+    },
+    {
+      "paintingOfId": 16,
+      "name": "fweew",
+      "email": "fw@dw",
+      "rating": "1",
+      "comment": "",
+      "id": 17
+    },
+    {
+      "paintingOfId": 16,
+      "name": "jkfh",
+      "email": "sdf@kj",
+      "rating": "4",
+      "comment": "",
+      "id": 18
+    },
+    {
+      "paintingOfId": 9,
+      "name": "hjgjhb",
+      "email": "ghf@fg",
+      "rating": "4",
+      "comment": "",
+      "id": 19
+    },
+    {
+      "paintingOfId": 11,
+      "name": "hjgsf",
+      "email": "afjdh@hjg",
+      "rating": "4",
+      "comment": "",
+      "id": 20
+    },
+    {
+      "paintingOfId": 11,
+      "name": "sasha",
+      "email": "sasha@gmail",
+      "rating": "4",
+      "comment": "",
+      "id": 21
+    },
+    {
+      "paintingOfId": 11,
+      "name": "hjgfa",
+      "email": "adf@jkh",
+      "rating": "1",
+      "comment": "",
+      "id": 22
+    },
+    {
+      "paintingOfId": 14,
+      "name": "lkfhw",
+      "email": "dfs@d",
+      "rating": "5",
+      "comment": "",
+      "id": 23
+    },
+    {
+      "paintingOfId": 8,
+      "name": "kjhfe",
+      "email": "fwek@KJ",
+      "rating": "3",
+      "comment": "KJGHJ",
+      "id": 24
+    },
+    {
+      "paintingOfId": 13,
+      "name": "fhg",
+      "email": "jk@gf",
+      "rating": "4",
+      "comment": "",
+      "id": 25
+    }
+  ],
+  "basket": [
+    {
+      "id": 7,
+      "name": "Name it",
+      "src": "assets/top-ranking/name-it.jpg",
+      "artist": "Christel Haag",
+      "year": 2020,
+      "price": 810
+    },
+    {
+      "id": 17,
+      "name": "The Flower Carrier",
+      "src": "assets/most-popular/the-flower-carrier.jpg",
+      "artist": "Diego Rivera",
+      "year": 1935,
+      "price": 6700
+    },
+    {
+      "id": 11,
+      "name": "Guernica",
+      "src": "assets/top-ranking/guernica.jpg",
+      "categoryId": 1,
+      "artist": "Pablo Picasso",
+      "year": 1937,
+      "price": 11000
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "name": "post name",
+      "src": "assets/top-ranking/guernica.jpg",
+      "date": "15.6.2020",
+      "author": "author",
+      "tag": "tag1, tag2",
+      "categoryId": 1,
+      "text": "The best store"
+    },
+    {
+      "id": 2,
+      "name": "post name",
+      "src": "assets/top-ranking/guernica.jpg",
+      "date": "15.6.2020",
+      "author": "author",
+      "tag": "tag1, tag2",
+      "categoryId": 5,
+      "text": "The best store"
+    },
+    {
+      "id": 3,
+      "name": "post name",
+      "src": "assets/top-ranking/guernica.jpg",
+      "date": "15.6.2020",
+      "author": "author",
+      "tag": "tag1, tag2",
+      "categoryId": 3,
+      "text": "The best store"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "postOfId": 1,
+      "name": "sasha",
+      "email": "adf@jkh",
+      "nestedComment": [
+        2,
+        3
+      ],
+      "level": 0,
+      "date": "15.6.2020",
+      "parentId": null,
+      "comment": "123asdmnn"
+    },
+    {
+      "id": 2,
+      "postOfId": 1,
+      "name": "sasha",
+      "email": "adf@jkh",
+      "nestedComment": [
+        4,
+        5
+      ],
+      "level": 1,
+      "date": "15.6.2020",
+      "parentId": 1,
+      "comment": "123asdmnn"
+    },
+    {
+      "id": 3,
+      "postOfId": 1,
+      "name": "sasha",
+      "email": "adf@jkh",
+      "nestedComment": [],
+      "level": 1,
+      "date": "15.6.2020",
+      "parentId": 1,
+      "comment": "123asdmnn"
+    },
+    {
+      "id": 4,
+      "postOfId": 1,
+      "name": "sasha",
+      "email": "adf@jkh",
+      "nestedComment": [],
+      "level": 2,
+      "date": "15.6.2020",
+      "parentId": 2,
+      "comment": "123asdmnn"
+    },
+    {
+      "id": 5,
+      "postOfId": 1,
+      "name": "sasha",
+      "email": "adf@jkh",
+      "nestedComment": [],
+      "level": 2,
+      "date": "15.6.2020",
+      "parentId": 2,
+      "comment": "123asdmnn"
+    }
+  ]
+}

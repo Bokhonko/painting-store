@@ -1,0 +1,9 @@
+<p>blog works!</p>
+    <div *ngFor="let post of posts$ | async">
+        <img [src]="post.src"/>
+        <p>{{post.tag}}</p>
+        <h1 [routerLink]="['/post', post.id]">{{post.name}}</h1>
+        <p>{{post.author}}</p>
+        <p>{{post.date}}</p>
+    </div>
+

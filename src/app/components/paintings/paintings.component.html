@@ -1,0 +1,17 @@
+<div class="painting" *ngIf="painting">
+    <img class="painting__img" [src]="painting.src">
+    <a class="painting__name" data-cy="painting-page-link" [routerLink]="['/paintings', painting.id]">{{painting.name}}</a>
+    <p class="painting__artist">{{painting.artist}}</p>
+    <div *ngIf="rating$ | async as rating">
+        <span class="star" *ngFor="let star of stars" [class.activeStar]="star <= rating">&#9733;</span>
+        <span class="star" *ngFor="let star of stars" [class.activeStar]="star > rating">&#9734;</span>
+    </div>
+    <div class="painting__bottom">
+        <p class="painting__price">{{painting.price}} USD</p>
+        <button data-cy="btn-buy" class="painting__button button" (click)="addPaintings(painting)" *ngIf="!(checkPaintingInBasket(painting.id) | async); else inBusket">Buy now</button>
+    </div>
+    <ng-template #inBusket>
+        <p>Already in basket</p>
+    </ng-template>    
+</div>
+

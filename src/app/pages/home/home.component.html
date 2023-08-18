@@ -1,0 +1,143 @@
+<div class="container home">
+<div class="home__section section">
+    <div class="section__links">
+      <h2 class="section__header">Category menu</h2>
+      <div class="section__list" *ngFor="let category of categories$ | async">
+        <a class="section__link" [routerLink]="['/category', category.name, category.id]">{{category.name}}</a>
+      </div>
+      <button class="section__button" type="button">More categories
+        <span class="section__arrow">&gt;</span>
+      </button>
+    </div>
+    <div class="section__cards">
+      <div class="section__card card">
+        <div>
+            <p class="card__sub-header">Banner subfocus</p>
+            <p class="card__header">Space for heading</p>
+        </div>
+        <button class="home__btn home__btn_blog" type="button">Read recepies
+            <span class="home__arrow home__arrow_btn">&gt;</span>
+        </button>
+      </div>
+      <div class="section__card card" >
+          <div>
+              <p class="card__sub-header">Banner subfocus</p>
+              <p class="card__header">Space for heading</p>
+          </div>
+          <button class="home__btn home__btn_blog" type="button">Read recepies
+              <span class="home__arrow home__arrow_btn">&gt;</span>
+          </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="home__section section">
+    <div class="section__links">
+      <h2 class="section__header">Top ranking</h2>
+      <div class="section__list" >
+        <a class="section__link" *ngFor="let painting of paintings | slice: 6:11">{{painting.name}}</a>
+      </div>
+      <button class="section__button" type="button">More categories
+        <span class="section__arrow">&gt;</span>
+      </button>
+    </div>
+    <div class="section__cards cards">
+      <app-paintings
+      *ngFor="let painting of paintings | slice: 6:9"
+      [painting]="painting"
+      ></app-paintings>
+    </div>
+  </div>
+
+  <div class="home__section section">
+    <div class="section__links">
+      <h2 class="section__header">Most popular</h2>
+      <div class="section__list" >
+        <a class="section__link" *ngFor="let painting of paintings | slice: 12:17">{{painting.name}}</a>
+      </div>
+      <button class="section__button" type="button">More categories
+        <span class="section__arrow">&gt;</span>
+      </button>
+    </div>
+    <div class="section__cards cards">
+      <app-paintings
+      *ngFor="let painting of paintings | slice: 12:15"
+      [painting]="painting"
+      ></app-paintings>
+    </div>
+  </div>
+
+  
+
+<div>
+  <div class="slider">
+    <div *ngFor="let review of reviews$ | async">
+      <p>{{review.text}}</p>
+      <p>{{review.author}}</p>
+      <img [src]="review.src">
+    </div>
+    
+  </div>
+</div>
+
+    <div class="container">
+      <h1>Bestsellers</h1>
+      <div class="section__cards cards">
+        <app-paintings 
+        class="painting"
+        *ngFor="let painting of carousel$ | async"
+        [painting]="painting"
+        ></app-paintings>
+      </div>
+
+    </div>
+
+
+    <div class="home__footers footers">
+      <div class="footers__list">
+        <div class="footers__row">
+          <h2 class="footers__header">Get in touch</h2>
+          <a class="footers__link" routerLink="/about">About Us</a>
+          <a class="footers__link" routerLink="/careers">Careers</a>
+          <a class="footers__link" href="#">Press Releases</a>
+          <a class="footers__link" routerLink="/blog">Blog</a>
+        </div>
+        <div class="footers__row">
+          <h2 class="footers__header">Connectins</h2>
+          <a class="footers__link" href="#">Facebook</a>
+          <a class="footers__link" href="#">Twitter</a>
+          <a class="footers__link" href="#">Instagram</a>
+          <a class="footers__link" href="#">Youtube</a>
+          <a class="footers__link" href="#">LinkedIn</a>
+        </div>
+        <div class="footers__row">
+          <h2 class="footers__header">Earnings</h2>
+          <a class="footers__link" href="#">Become an Affiliate</a>
+          <a class="footers__link" href="#">Advertise your product</a>
+          <a class="footers__link" href="#">Sell on Market</a>
+        </div>
+        <div class="footers__row">
+          <h2 class="footers__header">Account</h2>
+          <a class="footers__link" href="#">Your account</a>
+          <a class="footers__link" href="#">Returns Centre</a>
+          <a class="footers__link" href="#">100 % purchase protection</a>
+          <a class="footers__link" href="#">Chat with us</a>
+          <a class="footers__link" href="#">Help</a>
+        </div>
+      </div>
+      <div class="footers__tags">
+        <h2 class="footers__header">Product tags</h2>
+      </div>
+      <p class="footers__text">Copyright © 2020 petrbilek.com</p>
+    </div>
+
+<!-- 
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $('.slider').slick({
+          
+        });
+      });
+    </script> -->
+
+</div>

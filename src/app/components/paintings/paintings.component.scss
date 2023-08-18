@@ -1,0 +1,60 @@
+.painting {
+    padding: 16px;
+    border: 1px solid #D1D1D1;
+    border-radius: 12px;
+    &__img {
+        width: 237px;
+        height: 180px;
+        border-radius: 12px;
+    }
+    &__name {
+        display: block;
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 22px;
+        color: #151515;
+        margin-top: 16px;
+        margin-bottom: 4px;
+        text-decoration: none;
+    }
+    &__artist {
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 16px;
+        color: #575757;
+        margin-bottom: 16px;
+    }
+    &__price {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 27px;
+        color: #151515;
+    }
+    &__button {
+        padding: 6.5px 12px;
+    }
+    &__bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+
+.star {
+    font-size: 24px; /* розмір зірок */
+    //color: #F5B041; /* колір порожніх зірок */
+    display: none;
+    transition: color 0.2s ease-in-out;
+  }
+  
+  .activeStar {
+    display: inline-block;
+    color: #151515; /* колір заповнених зірок */
+  }

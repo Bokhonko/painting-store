@@ -1,0 +1,115 @@
+<div class="path">
+    <a class="path__name" routerLink="/">Homepage</a>
+    <span class="path__name path__name_sign">/</span>
+    <a class="path__name path__name_last">{{category}}</a>
+</div>
+<div class="category-page container" >
+    <h1 class="category-page__name" data-cy="category-name">{{category}}</h1>
+    <div class="category-page__content" *ngIf="paintings$ | async as p">
+        <div class="category-page__filters">
+            <div class="category-page__filter filter">
+                <h2 class="filter__name">Categories</h2>
+                <div class="filter__list" >
+                    <p class="filter__item" *ngFor="let category of categories$ | async">{{category.name}}</p>
+                </div>
+            </div>
+            <div class="category-page__filter filter">
+                <h2 class="filter__name">Brands</h2>
+                <mat-checkbox class="filter__item">Filtre by brand item</mat-checkbox>
+                <mat-checkbox class="filter__item">Filtre by brand item</mat-checkbox>
+                <mat-checkbox class="filter__item">Filtre by brand item</mat-checkbox>
+                <mat-checkbox class="filter__item">Filtre by brand item</mat-checkbox>
+                <mat-checkbox class="filter__item">Filtre by brand item</mat-checkbox>
+            </div>
+            <div class="category-page__filter filter">
+                <h2 class="filter__name">Rating</h2>
+                <mat-checkbox *ngFor="let count of stars">
+                    <span class="filter__star" *ngFor="let star of stars" [class.activeStar]="star <= count">&#9733;</span>
+                    <span class="filter__star" *ngFor="let star of stars" [class.activeStar]="star > count">&#9734;</span>
+                </mat-checkbox>
+            </div>
+            <div class="category-page__filter filter">
+                <h2 class="filter__name">Price</h2>
+                <mat-slider class="filter__slider slider" min="0" max="5000">
+                    <input value="600" matSliderStartThumb [(ngModel)]="val1">
+                    <input value="2400" matSliderEndThumb [(ngModel)]="val2">
+                </mat-slider>
+                <div class="slider__inputs">
+                    <div class="slider__min">
+                        <p class="slider__text">Min</p>
+                        <input class="slider__input" placeholder="0" [(ngModel)]="val1">
+                    </div>
+                    <div class="slider__max">
+                        <p class="slider__text">Max</p>
+                        <input class="slider__input" placeholder="000" [(ngModel)]="val2">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="category-page__cards cards" *ngIf="p.length !== 0; else elseBlock">
+            <app-paintings
+                *ngFor="let painting of p"
+                [painting]="painting"
+            ></app-paintings>
+        </div>
+        <ng-template #elseBlock>Content to render when condition is false.</ng-template>
+    </div>
+    <div class="home__footers footers">
+        <div class="footers__list">
+          <div class="footers__row">
+            <h2 class="footers__header">Get in touch</h2>
+            <a class="footers__link" routerLink="/about">About Us</a>
+            <a class="footers__link" routerLink="/careers">Careers</a>
+            <a class="footers__link" href="#">Press Releases</a>
+            <a class="footers__link" routerLink="/blog">Blog</a>
+          </div>
+          <div class="footers__row">
+            <h2 class="footers__header">Connectins</h2>
+            <a class="footers__link" href="#">Facebook</a>
+            <a class="footers__link" href="#">Twitter</a>
+            <a class="footers__link" href="#">Instagram</a>
+            <a class="footers__link" href="#">Youtube</a>
+            <a class="footers__link" href="#">LinkedIn</a>
+          </div>
+          <div class="footers__row">
+            <h2 class="footers__header">Earnings</h2>
+            <a class="footers__link" href="#">Become an Affiliate</a>
+            <a class="footers__link" href="#">Advertise your product</a>
+            <a class="footers__link" href="#">Sell on Market</a>
+          </div>
+          <div class="footers__row">
+            <h2 class="footers__header">Account</h2>
+            <a class="footers__link" href="#">Your account</a>
+            <a class="footers__link" href="#">Returns Centre</a>
+            <a class="footers__link" href="#">100 % purchase protection</a>
+            <a class="footers__link" href="#">Chat with us</a>
+            <a class="footers__link" href="#">Help</a>
+          </div>
+        </div>
+        <div class="footers__tags">
+          <h2 class="footers__header">Product tags</h2>
+        </div>
+        <p class="footers__text">Copyright © 2020 petrbilek.com</p>
+      </div>
+</div>
+
+
+
+
+<!-- <div class="row" *ngIf="paintings$ | async as p">
+    <h2 data-cy="category-name">{{category}}</h2>
+    <div class="row" *ngIf="p.length !== 0; else elseBlock">
+        <div class="col-xl-4" *ngFor="let painting of p">
+            <div>
+                <img class="painting__img" [src]="painting.src">
+                <h2 class="painting__name"><a [routerLink]="['/paintings', painting.id]">{{painting.name}}</a></h2>
+                <p class="painting__artist">{{painting.artist}}</p>
+                <p class="painting__year">{{painting.year}}</p>
+                <p class="painting__price">${{painting.price}}</p>
+            </div>
+        </div>
+    </div>
+    <ng-template #elseBlock>Content to render when condition is false.</ng-template>
+</div> -->
+
+

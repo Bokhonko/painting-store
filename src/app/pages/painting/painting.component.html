@@ -1,0 +1,106 @@
+
+<div class="path">
+    <a class="path__name" routerLink="/">Homepage</a>
+    <span class="path__name path__name_sign">/</span>
+    <a class="path__name" [routerLink]="['/category', (category$ | async)!.name, (category$ | async)!.id]">{{(category$ | async)!.name}}</a>
+    <span class="path__name path__name_sign">/</span>
+    <a class="path__name path__name_last">{{(painting$ | async)!.name}}</a>
+</div>
+<div class="painting-page container" >
+
+    <div class="painting" *ngIf="painting$ | async as painting">
+        <div [@fadeIn] class="">
+            <img class="painting__img" [src]="painting.src">
+        </div>
+        <div class="painting__description" >
+            <div [@fadeIn] class="painting__detail detail">
+                <h2 data-cy="painting-name" class="detail__name">{{painting.name}}</h2>
+                <div class="detail__rating" *ngIf="rating$ | async as rating">
+                    <span class="detail__star" *ngFor="let star of stars" [class.activeStar]="star <= rating">&#9733;</span>
+                    <span class="detail__star" *ngFor="let star of stars" [class.activeStar]="star > rating">&#9734;</span>
+                </div>
+                <p class="detail__artist">{{painting.artist}}</p>
+                <p class="detail__item">Year: {{painting.year}}</p>
+                <p class="detail__item">Category: {{(category$ | async)!.name}}</p>
+                <div class="detail__bottom-box bottom-box">
+                    <p class="bottom-box__price">{{painting.price}} USD</p>
+                    <div class="bottom-box__count count">
+                        <input class="count__input" type="text" placeholder="1" #numberPcs>
+                        <select class="count__select" id="numberPcs">
+                            <option class="count__option" value="1">Pcs</option>
+                            <option class="count__option" value="2">2 Pcs</option>
+                            <option class="count__option" value="3">3 Pcs</option>
+                            <option class="count__option" value="4">4 Pcs</option>
+                            <option class="count__option" value="5">5 Pcs</option>
+                        </select>
+                    </div>
+                    <button class="bottom-box__btn button">+ Add to card</button>
+                </div>
+            </div>
+            <div class="painting__info info">
+                <div class="info__list">
+                    <div class="info__item" [ngClass]="{'active': isActive(0)}" (click)="setActive(0)">Description</div>
+                    <div class="info__item" [ngClass]="{'active': isActive(1)}" (click)="setActive(1)">Reviews</div>
+                    <div class="info__item" [ngClass]="{'active': isActive(2)}" (click)="setActive(2)">Questions</div>
+                </div>
+
+                <div class="info__content" [@fadeIn] >
+                    <div class="info__text" [@tabs]="side" *ngIf="currentElementIndex === 0">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero nobis praesentium soluta adipisci, minus animi amet corporis voluptatem suscipit aliquam eius harum molestias repellat, fuga veritatis exercitationem cumque quos iure?</p>
+                    </div>
+                    <div class="info__text" [@tabs]="side" *ngIf="currentElementIndex === 1">
+                        <div class="info__reviews review" *ngFor="let review of reviews$ |async">
+                            <h1 class="review__name">{{review.name}}</h1>
+                            <p class="review__email">{{review.email}}</p>
+                            <p class="review__rating">{{review.rating}}</p>
+                            <p class="review__comment">{{review.comment}}</p>
+                        </div>
+                        <app-form [paintingId]="painting.id"></app-form>
+                    </div>
+                    <div class="info__text" [@tabs]="side" *ngIf="currentElementIndex === 2">
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore laborum dolores a praesentium voluptatem distinctio, molestiae debitis saepe recusandae commodi fugit corrupti cupiditate, est corporis dolorum facere? Maxime, est reprehenderit.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="home__footers footers">
+        <div class="footers__list">
+          <div class="footers__row">
+            <h2 class="footers__header">Get in touch</h2>
+            <a class="footers__link" routerLink="/about">About Us</a>
+            <a class="footers__link" routerLink="/careers">Careers</a>
+            <a class="footers__link" href="#">Press Releases</a>
+            <a class="footers__link" routerLink="/blog">Blog</a>
+          </div>
+          <div class="footers__row">
+            <h2 class="footers__header">Connectins</h2>
+            <a class="footers__link" href="#">Facebook</a>
+            <a class="footers__link" href="#">Twitter</a>
+            <a class="footers__link" href="#">Instagram</a>
+            <a class="footers__link" href="#">Youtube</a>
+            <a class="footers__link" href="#">LinkedIn</a>
+          </div>
+          <div class="footers__row">
+            <h2 class="footers__header">Earnings</h2>
+            <a class="footers__link" href="#">Become an Affiliate</a>
+            <a class="footers__link" href="#">Advertise your product</a>
+            <a class="footers__link" href="#">Sell on Market</a>
+          </div>
+          <div class="footers__row">
+            <h2 class="footers__header">Account</h2>
+            <a class="footers__link" href="#">Your account</a>
+            <a class="footers__link" href="#">Returns Centre</a>
+            <a class="footers__link" href="#">100 % purchase protection</a>
+            <a class="footers__link" href="#">Chat with us</a>
+            <a class="footers__link" href="#">Help</a>
+          </div>
+        </div>
+        <div class="footers__tags">
+          <h2 class="footers__header">Product tags</h2>
+        </div>
+        <p class="footers__text">Copyright © 2020 petrbilek.com</p>
+    </div>
+
+
+</div>

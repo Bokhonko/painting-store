@@ -1,0 +1,174 @@
+.painting-page {
+  width: 1170px;
+}
+.painting {
+  display: flex;
+  gap: 32px;
+  &__img {
+    width: 569px;
+    height: 436px;
+  }
+  &__description {
+
+  }
+  &__detail {
+
+  }
+  &__info {
+
+  }
+}
+.detail {
+  &__name {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 140%;
+    color: #151515;
+  }
+  &__rating {
+
+  }
+  &__star {
+    font-size: 24px;
+    display: none;
+    transition: color 0.2s ease-in-out;
+  }
+  &__artist {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 23px;
+    color: #151515;
+    margin: 30px 0px;
+  }
+  &__item {
+    margin-top: 12px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    color: #151515;
+  }
+  &__bottom-box {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    border: 1px solid #F5F5F5;
+    border-radius: 12px;
+    margin: 35px 0 30px 0;
+  }
+}
+.info {
+  &__list {
+    display: flex;
+    gap: 32px;
+  }
+  &__item {
+    width: 168px;
+  }
+  &__content {
+
+  }
+  &__text {
+
+  }
+  &__reviews {
+
+  }
+}
+.review {
+  &__name {
+
+  }
+  &__email {
+
+  }
+  &__rating {
+
+  }
+  &__comment {
+
+  }
+}
+.bottom-box {
+  margin-top: 56px;
+  margin-bottom: 48px;
+  width: 540px;
+  padding: 20px 16px;
+  &__price {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 39px;
+    color: #6A983C;
+    margin-right: 66px;
+  }
+  &__count {
+    background: #F9F9F9;
+    border: 1px solid #D1D1D1;
+    border-radius: 12px;
+    padding: 14px 16px;
+  }
+  &__btn {
+    height: 48px;
+    padding: 12px 17px;
+    font-size: 15px;
+  }
+}
+.count {
+  font-family: 'Poppins';
+  font-style: normal;
+  &__input {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 18px;
+    color: #151515;
+    width: 30px;
+    outline: none;
+    font-size: 12px;
+    border: none;
+    background-color: #F9F9F9;
+    margin-right: 6px;
+    border-right: 1px solid #D1D1D1;
+  }
+  &__select {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 18px;
+    color: #151515;
+    outline: none;
+    background-color: #F9F9F9;
+    box-sizing: border-box;
+    border: none;
+    width: 48px;
+  }
+  &__option {
+
+  }
+}
+
+
+
+.active {
+    border-bottom: 2px solid #6A983C;
+}
+
+// .detail__star {
+//   font-size: 24px;
+//   display: none;
+//   transition: color 0.2s ease-in-out;
+//   }
+  
+  .activeStar {
+    display: inline-block;
+    color: #FDBC15; /* колір заповнених зірок */
+  }
+
+  

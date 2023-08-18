@@ -1,0 +1,101 @@
+<div class="header container">
+    <div class="header__top-header top-header ">
+        <div class="top-header__list-left ">
+            <p class="top-header__text">Chat with us</p>
+            <p class="top-header__text_black">{{ '(099)1234567' | phoneNumber }}</p>
+            <p class="top-header__text_black">info@freshnesecom.com</p>
+        </div>
+        
+        <div class="top-header__list-right ">
+            <a class="top-header__text" routerLink="/blog">Blog</a>
+            <a class="top-header__text" routerLink="/about">About Us</a>
+            <a class="top-header__text" routerLink="/careers">Careers</a>
+        </div>
+    </div>
+    
+    <div class="header__bottom-header bottom-header">
+        <a class="bottom-header__logo " routerLink="/">
+            <img src="assets/svg/Freshnesecom.svg"/>
+        </a>
+
+        <div class="bottom-header__search search ">
+            <button class="search__btn-categories">
+                All categories
+                <img class="search__img-categories" src="assets/svg/Vector.svg"/>
+            </button>
+            <img class="search__img-line" src="assets/svg/Line 1.svg"/>
+            <input class="search__input" placeholder="Search Products, categories ..." [formControl]="searchControl"/>
+            <button class="search__button">
+                <img class="search__img-button" src="assets/svg/Layer.svg"/>
+            </button>
+        </div>
+
+        <div class="bottom-header__icons1 ">
+            <a class="bottom-header__cabinet ">
+                <img class="bottom-header__img-cabinet" src="assets/svg/ic-actions-user.svg"/>
+            </a>
+        </div>
+        <div class="bottom-header__icons2  ">
+            <button class="bottom-header__basket " mat-button [matMenuTriggerFor]="menu"  [tooltip]= "(paintingsInBasketNames | async) || 'Кошик пустий'" >
+                <img class="bottom-header__img-basket" src="assets/svg/ic-ecommerce-basket.svg"/>
+                <div [@counter]="paintingsInBasket$ | async" data-cy="basket-count" class="bottom-header__count-in-basket">{{paintingsInBasket$ | async}}</div>
+            </button>
+            <mat-menu #menu="matMenu">
+                <div class="cart ">
+                    <h1 class="cart__header">Shopping cart</h1>
+                    <div class="cart__content"  *ngFor="let painting of paintings$ | async">
+                        <div class="cart__left-menu">
+                            <img class="cart__img" [src]="painting.src"/>
+                            <div class="cart__list">
+                                <p class="cart__item"><img class="cart__svg" src="assets/basket/Wishlist.svg">Wishlist</p>
+                                <p class="cart__item"><img class="cart__svg" src="assets/basket/Compare.svg">Compare</p>
+                                <button class="cart__item-btn" (click)="delete(painting.id)"><img class="cart__svg" src="assets/basket/Remove.svg">Remove</button>
+                            </div>
+                        </div>
+                        <div class="cart__right-menu painting">
+                            <h2 class="painting__name">{{painting.name}}</h2>
+                            <div *ngIf="getRating(painting.id) | async as rating">
+                                <span class="star" *ngFor="let star of stars" [class.activeStar]="star <= rating">&#9733;</span>
+                                <span class="star" *ngFor="let star of stars" [class.activeStar]="star > rating">&#9734;</span>
+                            </div>
+                            <div class="painting__bottom">
+                                <p class="painting__price">{{painting.price}} USD</p>
+                                <div class="painting__count count">
+                                    <input class="count__input" type="text" placeholder="1" #numberPcs>
+                                    <select class="count__select" id="numberPcs">
+                                        <option class="count__option" value="1">Pcs</option>
+                                        <option class="count__option" value="2">2 Pcs</option>
+                                        <option class="count__option" value="3">3 Pcs</option>
+                                        <option class="count__option" value="4">4 Pcs</option>
+                                        <option class="count__option" value="5">5 Pcs</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                    <p class="cart__text">Subtotal</p>
+                    <h2 class="cart__all-sum">{{allSum$ | async}} USD</h2>
+                    <div class="cart__bottom bottom">
+                        <p class="bottom__text">Continue shopping</p>
+                        <button class="cart__btn button" (click)="goToBasket()">Go to checkout</button>
+                    </div>
+
+                </div>
+            </mat-menu>
+        </div>
+        <!-- <div class="bottom-header__icons2 col-xl-1 ">
+            <a class="bottom-header__basket " routerLink="/basket"  [tooltip]= "(paintingsInBasketNames | async) || 'Кошик пустий'" >
+                <img class="bottom-header__img-basket" src="assets/svg/ic-ecommerce-basket.svg"/>
+                <div [@counter]="paintingsInBasket$ | async" data-cy="basket-count" class="bottom-header__count-in-basket">{{paintingsInBasket$ | async}}</div>
+            </a>
+        </div> -->
+    </div>
+
+</div>
+<div class="header__menu menu" *ngIf="categories$ | async as categories">
+    <div class="menu__list" *ngFor="let category of categories">
+        <a class="menu__link" [routerLink]="['/category', category.name, category.id]">{{category.name}}</a>
+    </div>
+</div>

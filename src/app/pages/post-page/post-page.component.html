@@ -1,0 +1,26 @@
+<p>blog-page works!</p>
+    <div>
+        <img />
+        <p>Date:</p>
+        <p>Category:</p>
+        <p>Author:</p>
+        <h1></h1>
+        <h2>Tags</h2>
+        <p></p>
+        <p>Text</p>
+    </div>
+
+    <div>
+        <h2>Leave a reply</h2>
+    </div>
+    <div>
+        <h2>Comments</h2>
+        <div *ngFor="let comment of comment$ | async">
+            <app-post-comment
+            [name]="comment.name"
+            [date]="comment.date"
+            [nestedComments]="nestedComments$ | async"
+           ></app-post-comment>
+        </div>
+        
+    </div>

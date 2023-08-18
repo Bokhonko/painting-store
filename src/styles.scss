@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap';
+
+.tooltip {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 5px;
+    right: 25%;
+    font-size: 14px;
+    color: white;
+    background: rgb(4, 88, 4);
+    width: 200px;
+    opacity: 0;
+  }
+
+.button {
+  background: #6A983C;
+  border: 2px solid #46760A;
+  border-radius: 12px;
+  font-family: 'Poppins';
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 22px;
+  color: #FFFFFF;
+}
+
+.mdc-list-item__primary-text {
+  display: flex;
+}
+
+.mat-mdc-menu-content {
+  width: 350px;
+}
+.mat-typography {
+  background-color: #E5E5E5;
+}
+.mat-typography p {
+  margin: 0;
+}
+.mat-typography h2 {
+  margin: 0;
+}
+
+#mat-menu-panel-0 {
+  max-width: 400px;
+}
+
+.mat-mdc-checkbox.mat-accent {
+  --mdc-checkbox-selected-icon-color: #6A983C;
+  --mdc-checkbox-selected-focus-icon-color: #6A983C;
+  --mdc-checkbox-selected-hover-icon-color: #6A983C;
+  --mdc-checkbox-selected-pressed-icon-color: #6A983C;
+}
+.mat-mdc-checkbox.mat-accent .mdc-checkbox--selected~.mdc-checkbox__ripple {
+  background: #6A983C;
+}
+.mat-mdc-slider.mat-primary {
+  --mdc-slider-handle-color: #D1D1D1;
+  --mdc-slider-focus-handle-color: #D1D1D1;
+  --mdc-slider-hover-handle-color: #D1D1D1;
+  --mdc-slider-active-track-color: #6A983C;
+  --mdc-slider-inactive-track-color: #6A983C;
+  --mdc-slider-with-tick-marks-inactive-container-color: #6A983C;
+  --mat-mdc-slider-ripple-color: #6A983C;
+}
+
+.container {
+  padding: 0;
+}
+
+.path {
+  padding: 16px 45px;
+  background: #FDFDFD;
+  &__name {
+      text-decoration: none;
+      font-family: "Open Sans", sans-serif;
+      font-size: 12px;
+      font-weight: 400;
+      color: #A9A9A9;
+
+      &_last {
+          color: #151515;
+      }
+
+      &_sign {
+          margin: 0 8px;
+      }
+  }
+}
+
+.footers {
+  padding: 64px 0px;
+  &__list {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__row {
+    margin-bottom: 48px
+  }
+  &__tags {
+    margin-bottom: 48px;
+  }
+  &__header {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 27px;
+    color: #151515;
+  }
+  &__link {
+    display: block;
+    margin: 16px 0px;
+    text-decoration: none;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    color: #6A983C;
+  }
+  &__text {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    color: #151515;
+  }
+}
